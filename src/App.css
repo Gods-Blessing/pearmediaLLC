@@ -1,0 +1,129 @@
+.main-container{
+  position: relative;
+  height: 400px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  /* background-color: gray; */
+}
+
+.main-container >h2:first-child{
+  position: absolute;
+  top: -9vh;
+
+}
+
+.main-container >h2:last-child{
+  position: absolute;
+  bottom: -9vh;
+}
+
+.btn{
+  position: absolute;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 0 0 5px gray;
+}
+
+.btn{
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.btn::before{
+  content: '';
+  height: 45px;
+  width: 20px;
+  position: absolute;
+  top: -30px;
+  background-color: white;
+  clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.wheel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  /* background-color: rgb(67, 66, 66); */
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px white,
+              0 0 0 10px black;
+  transition: transform 5s ease-in-out;
+}
+
+.spinning-section{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  /* transform: rotate(calc(45deg * 5)); */
+  background-color: aquamarine;
+  transform-origin: right bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0 60%);
+  user-select: none;
+}
+
+.spinning-section >span{
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+.section-1{
+ background-color: rgb(245, 255, 47);
+ transform: rotate(calc(45deg * 0));
+
+}
+
+.section-2{
+  background-color: rgb(47, 182, 255);
+  transform: rotate(calc(45deg * 1));
+}
+
+.section-3{
+  background-color: rgb(255, 47, 213);
+  transform: rotate(calc(45deg * 2));
+
+}
+
+.section-4{
+  background-color: rgb(255, 161, 47);
+  transform: rotate(calc(45deg * 3));
+
+}
+
+.section-5{
+  background-color: rgb(255, 47, 89);
+  transform: rotate(calc(45deg * 4));
+
+}
+
+.section-6{
+  background-color: rgb(76, 13, 222);
+  transform: rotate(calc(45deg * 5));
+
+}
+
+.section-7{
+  background-color: rgb(76, 178, 152);
+  transform: rotate(calc(45deg * 6));
+
+}
+
+.section-8{
+  background-color: rgb(110, 85, 142);
+  transform: rotate(calc(45deg * 7));
+
+}
